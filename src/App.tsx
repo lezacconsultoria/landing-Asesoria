@@ -6,6 +6,13 @@
 import React, { useEffect } from 'react';
 
 export default function App() {
+  const trackBookingEvent = () => {
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'Lead');
+      (window as any).fbq('trackCustom', 'Agendar_Asesoria_Lezac');
+    }
+  };
+
   useEffect(() => {
     function reveal() {
       var reveals = document.querySelectorAll(".reveal");
@@ -55,14 +62,13 @@ export default function App() {
       <nav className="sticky top-0 z-50 border-b border-white/5 bg-background-dark/80 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <span className="material-symbols-outlined text-primary text-3xl">deployed_code</span>
-            <span className="text-xl font-bold tracking-tight uppercase text-white">Lezac <span className="text-primary">Consultoría</span></span>
+            <img src="/logo.png" alt="Lezac Consultoría" className="h-10 w-auto" />
           </div>
           <div className="hidden md:flex items-center gap-8">
             <a className="text-sm font-medium hover:text-primary transition-colors text-slate-300" href="#analisis">Análisis</a>
             <a className="text-sm font-medium hover:text-primary transition-colors text-slate-300" href="#perfil">Para Quién</a>
             <a className="text-sm font-medium hover:text-primary transition-colors text-slate-300" href="#beneficios">Beneficios</a>
-            <a href="https://calendly.com/lezacconsultoria/asesoria-comercial?month=2026-03" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/20 inline-block">
+            <a href="https://calendly.com/lezacconsultoria/asesoria-comercial?month=2026-03" target="_blank" rel="noopener noreferrer" onClick={trackBookingEvent} className="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/20 inline-block">
               Agendar Asesoría
             </a>
           </div>
@@ -88,7 +94,7 @@ export default function App() {
             </p>
             <div className="flex flex-col gap-6">
               <div className="flex">
-                <a href="https://calendly.com/lezacconsultoria/asesoria-comercial?month=2026-03" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-primary/80 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all transform hover:scale-[1.05] btn-glow animate-pulse-glow inline-block">
+                <a href="https://calendly.com/lezacconsultoria/asesoria-comercial?month=2026-03" target="_blank" rel="noopener noreferrer" onClick={trackBookingEvent} className="bg-primary hover:bg-primary/80 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all transform hover:scale-[1.05] btn-glow animate-pulse-glow inline-block">
                   Agendar asesoría gratuita
                 </a>
               </div>
@@ -411,10 +417,10 @@ export default function App() {
             <p className="text-xl text-white/80 max-w-2xl mx-auto mb-12 relative z-10 font-light">
               Garantizamos calidad y profundidad en cada análisis. Por este motivo, los cupos son estrictamente limitados.
             </p>
-            <a href="https://calendly.com/lezacconsultoria/asesoria-comercial?month=2026-03" target="_blank" rel="noopener noreferrer" className="inline-block bg-white text-primary hover:bg-slate-100 px-10 py-4 rounded-xl text-lg font-bold transition-all relative z-10 shadow-xl hover:shadow-white/20 transform hover:scale-[1.03]">
+            <a href="https://calendly.com/lezacconsultoria/asesoria-comercial?month=2026-03" target="_blank" rel="noopener noreferrer" onClick={trackBookingEvent} className="inline-block bg-white text-primary hover:bg-slate-100 px-10 py-4 rounded-xl text-lg font-bold transition-all relative z-10 shadow-xl hover:shadow-white/20 transform hover:scale-[1.03]">
               Reservar mi lugar ahora
             </a>
-            <a className="block mt-6 text-white/60 hover:text-white text-sm relative z-10 underline decoration-white/20 underline-offset-4 transition-colors" href="https://calendly.com/lezacconsultoria/asesoria-comercial?month=2026-03" target="_blank" rel="noopener noreferrer">
+            <a className="block mt-6 text-white/60 hover:text-white text-sm relative z-10 underline decoration-white/20 underline-offset-4 transition-colors" href="https://calendly.com/lezacconsultoria/asesoria-comercial?month=2026-03" target="_blank" rel="noopener noreferrer" onClick={trackBookingEvent}>
               Ver disponibilidad inmediata
             </a>
           </div>
@@ -474,7 +480,7 @@ export default function App() {
             Mejora tu gestión comercial con un análisis profundo. Reservas gestionadas vía Calendly.
           </p>
           <div className="flex flex-col items-center gap-6">
-            <a href="https://calendly.com/lezacconsultoria/asesoria-comercial?month=2026-03" target="_blank" rel="noopener noreferrer" className="bg-primary hover:bg-primary/80 text-white px-12 py-5 rounded-xl text-xl font-bold transition-all shadow-2xl shadow-primary/30 flex items-center gap-3 transform hover:scale-[1.05] animate-pulse-glow inline-flex">
+            <a href="https://calendly.com/lezacconsultoria/asesoria-comercial?month=2026-03" target="_blank" rel="noopener noreferrer" onClick={trackBookingEvent} className="bg-primary hover:bg-primary/80 text-white px-12 py-5 rounded-xl text-xl font-bold transition-all shadow-2xl shadow-primary/30 flex items-center gap-3 transform hover:scale-[1.05] animate-pulse-glow inline-flex">
               <span className="material-symbols-outlined font-light">calendar_today</span>
               Agendar asesoría ahora
             </a>
@@ -490,8 +496,7 @@ export default function App() {
       <footer className="py-16 border-t border-white/5 bg-background-dark text-slate-500 text-sm">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex items-center gap-2">
-            <span className="material-symbols-outlined text-primary text-xl">deployed_code</span>
-            <span className="font-bold tracking-tight uppercase text-slate-300">Lezac Consultoría</span>
+            <img src="/logo.png" alt="Lezac Consultoría" className="h-8 w-auto opacity-80" />
           </div>
           <p className="font-medium text-xs tracking-wide">© 2024 Lezac Consultoría. Todos los derechos reservados.</p>
           <div className="flex gap-8">
