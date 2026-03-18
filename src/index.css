@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #6550EA;
+  --color-accent-red: #FF4D4D;
+  --color-accent-green: #00FF7F;
+  --color-background-light: #f7f6f8;
+  --color-background-dark: #0B0B0B;
+  --color-card-dark: #151515;
+
+  --font-display: "Montserrat", sans-serif;
+  --font-sans: "Inter", sans-serif;
+
+  --radius-round_eight: 0.5rem;
+
+  --animate-pulse-glow: pulse-glow 6s infinite;
+  --animate-subtle-float: subtle-float 3s ease-in-out infinite;
+  --animate-shimmer: shimmer 3s infinite linear;
+  --animate-marquee: marquee 120s linear infinite;
+
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(101, 80, 234, 0); }
+    50% { box-shadow: 0 0 20px 5px rgba(101, 80, 234, 0.4); }
+  }
+  @keyframes subtle-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0B0B0B;
+}
+h1, h2, h3, h4 {
+  font-family: 'Montserrat', sans-serif;
+  color: #FFFFFF;
+}
+
+.glass-card {
+  background: #151515;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  border-color: #6550EA;
+  box-shadow: 0 10px 30px -10px rgba(101, 80, 234, 0.3);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+
+.btn-glow {
+  box-shadow: 0 0 15px rgba(101, 80, 234, 0.3);
+}
+
+.video-glow {
+  box-shadow: 0 0 30px rgba(101, 80, 234, 0.2);
+}
+
+.shimmer-effect {
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 4s infinite linear;
+}
