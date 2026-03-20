@@ -60,7 +60,7 @@ export default function App() {
     <div className="bg-background-dark text-slate-100 antialiased overflow-x-hidden">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 border-b border-white/5 bg-background-dark/80 backdrop-blur-md">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-center md:justify-between">
           <div className="flex items-center gap-2">
             <img src="/logo.png" alt="Lezac Consultoría" className="h-10 w-auto" />
           </div>
@@ -74,34 +74,48 @@ export default function App() {
           </div>
         </div>
       </nav>
-
       {/* Hero Section */}
-      <section className="relative pt-24 pb-32 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-          <div className="relative z-10 reveal active">
+      <section className="relative pt-12 pb-32 overflow-hidden">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <div className="relative z-10 reveal active mb-12">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-red/10 border border-accent-red/20 mb-6">
               <span className="flex h-2 w-2 rounded-full bg-accent-red animate-pulse"></span>
               <span className="text-accent-red text-xs font-bold uppercase tracking-wider">Solo 10 cupos gratuitos por mes</span>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] mb-6 text-white font-display">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-[1.1] mb-6 text-white font-display">
               ¿Tu empresa podría vender más… pero no sabes dónde está el problema?
             </h1>
-            <p className="text-xl text-slate-400 mb-6 max-w-xl">
+            <p className="text-xl text-slate-400 mb-2 mx-auto max-w-2xl">
               Descubre en 45 minutos cómo optimizar tu gestión comercial con datos reales.
             </p>
-            <p className="text-primary font-bold text-sm mb-8 tracking-wide">
+            <p className="text-primary font-bold text-sm tracking-wide">
               Más de 100 empresas asesoradas en Latinoamérica.
             </p>
-            <div className="flex flex-col gap-6">
-              <div className="flex">
-                <a href="https://calendly.com/lezacconsultoria/asesoria-comercial?month=2026-03" target="_blank" rel="noopener noreferrer" onClick={trackBookingEvent} className="bg-primary hover:bg-primary/80 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all transform hover:scale-[1.05] btn-glow animate-pulse-glow inline-block">
+          </div>
+
+          <div className="flex flex-col items-center gap-8">
+            <div className="relative rounded-2xl overflow-hidden glass-card group video-glow reveal active stagger-2 shadow-2xl inline-block bg-transparent mx-auto">
+              <video 
+                className="block h-auto max-h-[60vh] w-auto max-w-full mx-auto" 
+                controls 
+                autoPlay={false}
+                src="/vsl_2026.mp4"
+              >
+                Tu navegador no soporta el formato de video.
+              </video>
+            </div>
+            
+            <div className="flex flex-col items-center gap-6 w-full max-w-xl">
+              <div className="reveal stagger-3 w-full">
+                 <a href="https://calendly.com/lezacconsultoria/asesoria-comercial?month=2026-03" target="_blank" rel="noopener noreferrer" onClick={trackBookingEvent} className="w-full bg-primary hover:bg-primary/80 text-white px-8 py-5 rounded-xl text-xl font-bold transition-all transform hover:scale-[1.05] btn-glow animate-pulse-glow inline-block text-center shadow-2xl shadow-primary/30">
                   Agendar asesoría gratuita
                 </a>
               </div>
-              <div className="flex flex-wrap gap-x-6 gap-y-2">
+              
+              <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 reveal stagger-4">
                 <span className="flex items-center gap-2 text-xs font-medium text-slate-400">
                   <span className="material-symbols-outlined text-accent-green text-sm">check_circle</span>
-                  Asesoría de 45 minutos
+                  Asesoría de 45 min
                 </span>
                 <span className="flex items-center gap-2 text-xs font-medium text-slate-400">
                   <span className="material-symbols-outlined text-accent-green text-sm">check_circle</span>
@@ -113,33 +127,27 @@ export default function App() {
                 </span>
               </div>
             </div>
-          </div>
-          <div className="flex flex-col gap-6">
-            <div className="relative lg:h-[420px] rounded-2xl overflow-hidden glass-card group video-glow reveal active stagger-2">
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent"></div>
-              <img alt="VSL Placeholder" className="w-full h-full object-cover mix-blend-overlay opacity-60 group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqX5qNWXvaf_6-qHwXLUN3D6sAf9hnnhifYXxw1OvaDEY5DVqeqLLM0K5KVOHKSpgl0HzWI3JVTx6imlfm1gv2gDtz0Eo9-qH1ngE0XkfFFNzGjTA9mewAU_4EWzweigXny4_CQ9gXqOx_O_2gelflOITW235jasaBe6W1SRkhLdQfVzWVH2PWCZIWhB7KqTd8QBg5WOiJ_MQhT4VEpE4onr1koDDQkKwHtbAQRUn_JlbhfbzLutd1__YCehnuCwZU-GQzK7abRsN-" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-20 h-20 bg-primary/90 rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform shadow-2xl animate-pulse-glow">
-                  <span className="material-symbols-outlined text-white text-4xl translate-x-1">play_arrow</span>
-                </div>
-              </div>
-            </div>
-            <div className="reveal stagger-3 bg-white/[0.03] border border-white/5 rounded-xl p-5">
-              <p className="text-xs font-bold text-primary mb-3 uppercase tracking-widest">En este video de 1 minuto descubrirás:</p>
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2 text-sm text-slate-400">
+
+            <div className="reveal stagger-5 bg-white/[0.03] border border-white/5 rounded-2xl p-6 w-full max-w-2xl mt-4">
+              <p className="text-xs font-bold text-primary mb-4 uppercase tracking-widest text-center">En este video descubrirás:</p>
+              <div className="grid sm:grid-cols-2 gap-x-8 gap-y-4 max-w-fit mx-auto">
+                <li className="flex items-start gap-2 text-sm text-slate-400 list-none">
                   <span className="text-primary mt-0.5 text-lg leading-none">•</span>
                   <span>Cómo detectamos fugas de ingresos</span>
                 </li>
-                <li className="flex items-start gap-2 text-sm text-slate-400">
+                <li className="flex items-start gap-2 text-sm text-slate-400 list-none">
                   <span className="text-primary mt-0.5 text-lg leading-none">•</span>
-                  <span>El método para optimizar tu portafolio</span>
+                  <span>El método para optimizar portafolio</span>
                 </li>
-                <li className="flex items-start gap-2 text-sm text-slate-400">
+                <li className="flex items-start gap-2 text-sm text-slate-400 list-none">
                   <span className="text-primary mt-0.5 text-lg leading-none">•</span>
                   <span>Qué esperar de tu sesión estratégica</span>
                 </li>
-              </ul>
+                <li className="flex items-start gap-2 text-sm text-slate-400 list-none">
+                  <span className="text-primary mt-0.5 text-lg leading-none">•</span>
+                  <span>Casos de éxito reales aplicados</span>
+                </li>
+              </div>
             </div>
           </div>
         </div>
