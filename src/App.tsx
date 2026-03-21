@@ -75,14 +75,14 @@ export default function App() {
         </div>
       </nav>
       {/* Hero Section */}
-      <section className="relative pt-12 pb-32 overflow-hidden">
+      <section className="relative pt-6 pb-24 overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <div className="relative z-10 reveal active mb-12">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-red/10 border border-accent-red/20 mb-6">
+          <div className="relative z-10 reveal active mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-red/10 border border-accent-red/20 mb-4">
               <span className="flex h-2 w-2 rounded-full bg-accent-red animate-pulse"></span>
               <span className="text-accent-red text-xs font-bold uppercase tracking-wider">Solo 10 cupos gratuitos por mes</span>
             </div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-[1.1] mb-6 text-white font-display">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold leading-[1.1] mb-4 text-white font-display">
               ¿Tu empresa podría vender más… pero no sabes dónde está el problema?
             </h1>
             <p className="text-xl text-slate-400 mb-2 mx-auto max-w-2xl">
@@ -93,13 +93,13 @@ export default function App() {
             </p>
           </div>
 
-          <div className="flex flex-col items-center gap-8">
+          <div className="flex flex-col items-center gap-4">
             <div className="relative rounded-2xl overflow-hidden glass-card group video-glow reveal active stagger-2 shadow-2xl inline-block bg-transparent mx-auto">
               <video 
-                className="block h-auto max-h-[60vh] w-auto max-w-full mx-auto" 
+                className="block h-auto max-h-[50vh] w-auto max-w-full mx-auto" 
                 controls 
                 autoPlay={false}
-                src="/vsl_2026.mp4"
+                src="/vsl-2026.mp4"
               >
                 Tu navegador no soporta el formato de video.
               </video>
