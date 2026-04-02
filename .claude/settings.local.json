@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C \"D:/trabajo/antigravity/landing-Asesoria\" log --oneline -10)",
+      "Bash(npm run:*)"
+    ]
+  }
+}
