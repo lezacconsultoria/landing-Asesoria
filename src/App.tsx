@@ -17,13 +17,6 @@ export default function App() {
     }
   };
 
-  const trackBookingEvent = () => {
-    if (typeof window !== 'undefined' && (window as any).fbq) {
-      (window as any).fbq('track', 'Lead');
-      (window as any).fbq('trackCustom', 'Agendar_Asesoria_Lezac');
-    }
-  };
-
   useEffect(() => {
     function reveal() {
       const reveals = document.querySelectorAll(".reveal");
@@ -89,7 +82,6 @@ export default function App() {
               href="https://calendly.com/lezacconsultoria/asesoria-comercial?month=2026-03"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={trackBookingEvent}
               className="bg-gradient-to-r from-emerald-500 to-emerald-400 hover:from-emerald-400 hover:to-emerald-300 text-black px-5 py-2.5 rounded-lg text-sm font-bold transition-all shadow-lg shadow-emerald-500/20 animate-pulse-subtle"
             >
               Agendar Asesoría
@@ -124,7 +116,6 @@ export default function App() {
                 href="https://calendly.com/lezacconsultoria/asesoria-comercial?month=2026-03"
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={trackBookingEvent}
                 className="block bg-gradient-to-r from-emerald-500 to-emerald-400 text-black px-5 py-3 rounded-lg text-sm font-bold text-center animate-pulse-subtle"
               >
                 Agendar Asesoría Gratuita
@@ -186,7 +177,6 @@ export default function App() {
               href="https://calendly.com/lezacconsultoria/asesoria-comercial?month=2026-03"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={trackBookingEvent}
               className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-emerald-400 hover:from-emerald-400 hover:to-emerald-300 text-black px-10 py-4 rounded-xl text-lg font-bold transition-all transform hover:scale-[1.02] shadow-xl shadow-emerald-500/30 animate-pulse-subtle"
             >
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -427,7 +417,6 @@ export default function App() {
             href="https://calendly.com/lezacconsultoria/asesoria-comercial?month=2026-03"
             target="_blank"
             rel="noopener noreferrer"
-            onClick={trackBookingEvent}
             className="inline-block bg-white text-violet-700 hover:bg-slate-100 px-10 py-4 rounded-xl text-lg font-bold transition-all shadow-2xl transform hover:scale-[1.02]"
           >
             Reservar mi lugar ahora
@@ -437,7 +426,6 @@ export default function App() {
             href="https://calendly.com/lezacconsultoria/asesoria-comercial?month=2026-03"
             target="_blank"
             rel="noopener noreferrer"
-            onClick={trackBookingEvent}
           >
             Ver disponibilidad →
           </a>
@@ -493,7 +481,6 @@ export default function App() {
               href="https://calendly.com/lezacconsultoria/asesoria-comercial?month=2026-03"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={trackBookingEvent}
               className="inline-flex items-center gap-3 bg-gradient-to-r from-emerald-500 to-emerald-400 hover:from-emerald-400 hover:to-emerald-300 text-black px-12 py-5 rounded-xl text-lg font-bold transition-all shadow-2xl shadow-emerald-500/30 transform hover:scale-[1.02] animate-pulse-subtle"
             >
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
