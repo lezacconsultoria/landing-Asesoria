@@ -157,7 +157,6 @@ export default function App() {
                 autoPlay
                 muted
                 loop
-                poster="/video-poster.jpg"
                 src="/vsl-2026.mp4"
               >
                 Tu navegador no soporta el formato de video.
